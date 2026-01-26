@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1A1A1A;
+  --color-primary-dark: #000000;
+  --color-background-light: #f7f7f7;
+  --color-background-off: #f8f9fc;
+  --color-text-main: #0d121b;
+  --color-text-sub: #4c669a;
+
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@keyframes slide-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: slide-scroll 40s linear infinite;
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
+}

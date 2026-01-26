@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Infinity, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Infinity, Instagram, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -13,19 +13,18 @@ const Footer: React.FC = () => {
             </div>
             <span className="text-lg font-bold tracking-tight text-text-main">Divines_Code</span>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-8 text-sm text-text-sub">
             <Link to="#" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="#" className="hover:text-primary transition-colors">Terms of Service</Link>
             <div className="flex gap-4">
-               <a href="#" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
-               <a href="#" className="hover:text-primary transition-colors"><Linkedin size={18} /></a>
-               <a href="#" className="hover:text-primary transition-colors"><Twitter size={18} /></a>
+              <a href="https://www.instagram.com/divine_code_41" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
+              <a href="https://www.linkedin.com/company/110118328" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Linkedin size={18} /></a>
             </div>
           </div>
-          
+
           <p className="text-sm text-text-sub text-center md:text-right">
-            © 2024 Divines_Code. All rights reserved.
+            © 2025 Divines_Code. All rights reserved.
           </p>
         </div>
       </div>
