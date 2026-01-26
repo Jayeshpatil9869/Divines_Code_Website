@@ -10,8 +10,7 @@ const About: React.FC = () => {
         <div className="relative z-10 max-w-4xl space-y-6">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-2">Our Mission</span>
           <h1 className="text-5xl font-black tracking-tighter text-text-main sm:text-6xl md:text-7xl">
-            Empowering Brands Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Strategic Digital Growth</span>
-          </h1>
+            Empowering Brands Through Strategic Digital Growth</h1>
           <p className="mx-auto max-w-2xl text-lg text-text-sub font-normal leading-relaxed">
             We don't just post content. We build digital ecosystems that drive real business results, focusing on clarity, precision, and measurable impact.
           </p>

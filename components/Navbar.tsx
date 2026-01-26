@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full border-b border-white/20 bg-white/60 backdrop-blur-lg">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
@@ -32,9 +32,8 @@ const Navbar: React.FC = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive(link.path) ? 'text-primary font-bold' : 'text-text-sub'
-              }`}
+              className={`text-sm font-medium transition-colors hover:text-primary ${isActive(link.path) ? 'text-primary font-bold' : 'text-text-sub'
+                }`}
             >
               {link.name}
             </Link>
@@ -67,9 +66,8 @@ const Navbar: React.FC = () => {
               key={link.name}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className={`text-base font-medium transition-colors ${
-                isActive(link.path) ? 'text-primary' : 'text-text-sub'
-              }`}
+              className={`text-base font-medium transition-colors ${isActive(link.path) ? 'text-primary' : 'text-text-sub'
+                }`}
             >
               {link.name}
             </Link>

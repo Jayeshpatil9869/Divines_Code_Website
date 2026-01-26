@@ -2,22 +2,34 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Play, Film, Megaphone, Handshake, Users, ArrowRight, Star } from 'lucide-react';
 import SimpleBarChart from '../components/BarChart';
+import PortfolioSlider from '../components/PortfolioSlider';
 
 const Home: React.FC = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-background-light py-20 lg:py-32">
+      <section
+        className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-background-light py-20 lg:py-32"
+      >
+        <div
+          className="absolute inset-0 z-0 opacity-100"
+          style={{
+            backgroundImage: "url('/hero-pattern.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center bottom",
+            backgroundRepeat: "no-repeat"
+          }}
+        ></div>
         <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[100px]"></div>
         <div className="absolute top-40 -left-20 h-[300px] w-[300px] rounded-full bg-purple-500/5 blur-[80px]"></div>
-        
+
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
           <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-4 py-1.5 text-sm font-medium text-text-sub">
             <span className="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
             Top-rated Agency for Instagram Growth
           </span>
           <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight text-text-main sm:text-6xl md:text-7xl">
-            Digital Marketing Services That <span className="text-primary">Grow Brands</span> on Instagram
+            Digital Marketing Services That <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Grow Brands on Instagram</span>
           </h1>
           <p className="mb-10 max-w-2xl text-lg font-normal text-text-sub sm:text-xl">
             Specializing in Reels growth, organic engagement, and premium brand collaborations. We turn followers into customers.
@@ -71,9 +83,9 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-xl lg:h-[500px]">
-              <img 
-                src="https://picsum.photos/800/800?random=1" 
-                alt="Modern minimalist office" 
+              <img
+                src="https://picsum.photos/800/800?random=1"
+                alt="Modern minimalist office"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -118,7 +130,7 @@ const Home: React.FC = () => {
               <p className="mt-2 text-lg text-text-sub">See the difference we make in real numbers.</p>
             </div>
             <Link to="/work" className="group flex items-center gap-2 text-sm font-bold text-primary">
-              View full portfolio 
+              View full portfolio
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -135,7 +147,7 @@ const Home: React.FC = () => {
                   <span className="text-sm font-medium text-text-sub">Accounts reached</span>
                 </div>
                 <div className="mt-8 h-32 w-full">
-                   <SimpleBarChart />
+                  <SimpleBarChart />
                 </div>
                 <p className="mt-4 text-xs text-text-sub">Last 30 days vs previous period</p>
               </div>
@@ -150,32 +162,14 @@ const Home: React.FC = () => {
             </div>
 
             {/* Reels Gallery */}
-            <div className="flex gap-4 overflow-x-auto pb-4 hide-scrollbar">
-              {[
-                { title: "Neon Vibes", views: "125K", img: 2 },
-                { title: "Urban Style", views: "98K", img: 3 },
-                { title: "Morning Ritual", views: "210K", img: 4 },
-                { title: "Tech Reviews", views: "180K", img: 5 },
-              ].map((reel, i) => (
-                <div key={i} className="group relative aspect-[9/16] min-w-[240px] flex-shrink-0 cursor-pointer overflow-hidden rounded-xl bg-gray-900 shadow-md">
-                  <img src={`https://picsum.photos/400/700?random=${reel.img}`} alt={reel.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <p className="text-sm font-bold">{reel.title}</p>
-                    <p className="text-xs opacity-80">{reel.views} Views</p>
-                  </div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 p-3 backdrop-blur-sm transition-transform group-hover:scale-110">
-                    <Play size={24} className="text-white fill-white" />
-                  </div>
-                </div>
-              ))}
-            </div>
+            <PortfolioSlider />
+
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Testimonials */}
-      <section className="bg-background-light py-24">
+      < section className="bg-background-light py-24" >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-text-main sm:text-4xl">What Our Clients Say</h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -190,7 +184,7 @@ const Home: React.FC = () => {
                 </div>
                 <p className="mb-6 flex-1 text-lg leading-relaxed text-text-sub">"{t.text}"</p>
                 <div className="flex items-center gap-4 border-t border-gray-200 pt-6">
-                  <img src={`https://picsum.photos/100/100?random=${10+i}`} alt={t.author} className="h-10 w-10 rounded-full object-cover bg-gray-300" />
+                  <img src={`https://picsum.photos/100/100?random=${10 + i}`} alt={t.author} className="h-10 w-10 rounded-full object-cover bg-gray-300" />
                   <div>
                     <p className="font-bold text-text-main">{t.author}</p>
                     <p className="text-sm text-text-sub">{t.role}</p>
@@ -200,9 +194,9 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
-    </div>
+    </div >
   );
 };
 
