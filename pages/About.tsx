@@ -40,8 +40,9 @@ const About: React.FC = () => {
             <div className="flex-1">
               <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl aspect-[4/3] group">
                 <img
-                  src="https://picsum.photos/800/600?random=20"
+                  src="/divinesCode.png"
                   alt="Sanket working"
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
@@ -87,7 +88,7 @@ const About: React.FC = () => {
           <div className="flex justify-center">
             <div className="group relative flex flex-col gap-4 max-w-sm">
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
-                <img src="public/myimage.jpg" alt="Sanket" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+                <img src="/myimage.jpg" alt="Sanket" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
               </div>
               <div className="text-center sm:text-left">
                 <h3 className="text-xl font-bold text-text-main">Sanket</h3>

@@ -4,34 +4,34 @@ import { TrendingUp, Users, Heart } from 'lucide-react';
 
 const caseStudies = [
   {
-    title: "Flagship Client Transformation",
-    desc: "See how we took a generic feed and turned it into a high-converting visual asset.",
+    title: "RK Saloon Transformation",
+    desc: "From standard local shop to a premium salon brand. Complete visual overhaul to attract high-ticket clientele.",
     stats: [
-      { label: "Follower Growth", value: "+45,000" },
-      { label: "Engagement Rate", value: "+250%" }
+      { label: "Walk-in Traffic", value: "+45%" },
+      { label: "Customer Retention", value: "92%" }
     ],
-    before: "https://picsum.photos/1200/800?random=51&grayscale",
-    after: "https://picsum.photos/1200/800?random=50"
+    before: "/rk_saloon_before.png",
+    after: "/rk_saloon_after.png"
   },
   {
-    title: "E-Commerce Revenue Scale",
-    desc: "Optimizing product reels and ad creatives to drive direct sales and maximize ROAS.",
+    title: "Hotel Renuka Rebrand",
+    desc: "Elevating a legacy hotel brand with modern aesthetics to drive online bookings and occupancy.",
     stats: [
-      { label: "ROAS Increase", value: "+150%" },
-      { label: "Monthly Sales", value: "+12k Units" }
+      { label: "Direct Bookings", value: "+60%" },
+      { label: "Social Reach", value: "250k+" }
     ],
-    before: "https://picsum.photos/1200/800?random=52&grayscale",
-    after: "https://picsum.photos/1200/800?random=53"
+    before: "/hotel_renuka_before.jpeg",
+    after: "/hotel_renuka_after.png"
   },
   {
-    title: "Personal Brand Authority",
-    desc: "Establishing thought leadership through consistent, value-driven video content.",
+    title: "Vishal F. Personal Brand",
+    desc: "Establishing digital authority and trust through a cohesive, high-impact personal brand identity.",
     stats: [
-      { label: "Total Reach", value: "1M+ Acc." },
-      { label: "Audience Growth", value: "+85k New" }
+      { label: "Engagement Rate", value: "+300%" },
+      { label: "Inbound Leads", value: "+50/mo" }
     ],
-    before: "https://picsum.photos/1200/800?random=54&grayscale",
-    after: "https://picsum.photos/1200/800?random=55"
+    before: "/vishalf_before.png",
+    after: "/vishalf_after.png"
   }
 ];
 
@@ -80,10 +80,11 @@ const CaseStudies: React.FC = () => {
 
                 {/* Visual Side */}
                 <div className="lg:col-span-8 relative group h-[400px] lg:h-full overflow-hidden">
-                  <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${study.after})` }}></div>
+                  <img src={study.after} alt="After transformation" className="absolute inset-0 w-full h-full object-cover object-left" loading="lazy" />
                   <div className="absolute top-6 right-6 bg-primary/90 text-white px-3 py-1 rounded-md text-sm font-bold shadow-lg z-20">AFTER</div>
 
-                  <div className="absolute inset-y-0 left-0 w-1/2 overflow-hidden border-r-4 border-white z-10 bg-cover bg-center" style={{ backgroundImage: `url(${study.before})` }}>
+                  <div className="absolute inset-y-0 left-0 w-1/2 overflow-hidden border-r-4 border-white z-10">
+                    <img src={study.before} alt="Before transformation" className="absolute inset-0 w-full h-full object-cover object-center" loading="lazy" />
                     <div className="absolute inset-0 bg-black/20"></div>
                   </div>
                   <div className="absolute top-6 left-6 bg-white/90 text-primary px-3 py-1 rounded-md text-sm font-bold shadow-lg z-20">BEFORE</div>

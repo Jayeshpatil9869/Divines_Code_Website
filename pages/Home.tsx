@@ -77,7 +77,7 @@ const Home: React.FC = () => {
                   <p className="text-3xl font-black text-primary">100%</p>
                   <p className="text-sm font-medium text-text-sub">Organic Methods</p>
                 </div>
-                <div> 
+                <div>
                   <p className="text-3xl font-black text-primary">Multi-Niche</p>
                   <p className="text-sm font-medium text-text-sub">Experience</p>
                 </div>
@@ -85,8 +85,9 @@ const Home: React.FC = () => {
             </div>
             <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-xl lg:h-[500px]">
               <img
-                src="https://picsum.photos/800/800?random=1"
+                src="/office.png"
                 alt="Content creation setup"
+                loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -146,7 +147,7 @@ const Home: React.FC = () => {
                 <div className="mt-6 flex items-baseline gap-2">
                   <span className="text-5xl font-black text-text-main">842K</span>
                   <span className="text-sm font-medium text-text-sub">Accounts reached
-</span>
+                  </span>
                 </div>
                 <div className="mt-8 h-32 w-full">
                   <SimpleBarChart />

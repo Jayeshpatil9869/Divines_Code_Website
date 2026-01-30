@@ -11,15 +11,40 @@ const reels = [
 ];
 
 const ReelCard: React.FC<{ reel: typeof reels[0] }> = ({ reel }) => {
+    const [isPlaying, setIsPlaying] = React.useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const handlePlay = () => {
+        setIsPlaying(true);
+        if (videoRef.current) {
+            videoRef.current.play();
+        }
+    };
+
     return (
         <div className="group relative aspect-[9/16] min-w-[310px] flex-shrink-0 bg-gray-900 shadow-md snap-center overflow-hidden rounded-xl">
             <video
+                ref={videoRef}
                 src={reel.video}
-                controls
+                controls={isPlaying}
                 playsInline
+                preload="none"
                 className="absolute inset-0 h-full w-full object-cover"
+                onPause={() => setIsPlaying(false)}
             />
-            <div className="absolute top-4 left-4 pointer-events-none">
+
+            {!isPlaying && (
+                <div
+                    className="absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer z-10 transition-colors hover:bg-black/30"
+                    onClick={handlePlay}
+                >
+                    <div className="rounded-full bg-white/20 p-4 backdrop-blur-sm transition-transform group-hover:scale-110">
+                        <Play className="h-8 w-8 text-white fill-white" />
+                    </div>
+                </div>
+            )}
+
+            <div className="absolute top-4 left-4 pointer-events-none z-20">
                 <div className="bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
                     <p className="text-white text-xs font-bold">{reel.views} Views</p>
                 </div>
