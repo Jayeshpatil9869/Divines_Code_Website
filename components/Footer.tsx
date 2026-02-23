@@ -23,8 +23,13 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <p className="text-sm text-text-sub text-center md:text-right">
-            © 2025 Divines_Code. All rights reserved.
+          <p className="text-sm text-text-sub text-center md:text-right leading-relaxed">
+            <span className="inline-block">© 2026 Created and Maintained by</span>{' '}
+            <span className="inline-block">
+              <a href="https://mahendranagpure.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors whitespace-nowrap">Mahendra Nagpure</a>
+              {' & '}
+              <a href="https://jayeshbpatil.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors whitespace-nowrap">Jayesh Patil</a>
+            </span>
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -19,7 +19,7 @@ const ScrollToTop = () => {
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="flex min-h-screen flex-col bg-white text-text-main antialiased selection:bg-primary selection:text-white">
         <Navbar />
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
